@@ -1,6 +1,11 @@
 #!/usr/bin/python
 
 class RpsCommand(): 
+  """
+  Responsible for translating user input into 
+  RPS commands
+  """
+
   INVALID = 0
   ROCK = 1
   PAPER = 2
@@ -46,6 +51,10 @@ class RpsLogic():
 
 
 class RpsStats():
+  """
+  Responsible for loading/saving game stats as a text file
+  """
+
   @staticmethod
   def load_stats(filename):
     try:
