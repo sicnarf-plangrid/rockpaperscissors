@@ -1,5 +1,7 @@
 PlanGrid Coding Challenge
 
 Instructions:
+- To play: python rps.py
+- To run tests: python tests.py
 
-
+Additional features:
