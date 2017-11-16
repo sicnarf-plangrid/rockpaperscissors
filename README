@@ -1,7 +1,10 @@
 PlanGrid Coding Challenge
 
 Instructions:
+- Check out this repo
 - To play: python rps.py
 - To run tests: python tests.py
 
 Additional features:
+- Persisting user data (# wins for each player) between each game,
+  requires write access in the directory where run

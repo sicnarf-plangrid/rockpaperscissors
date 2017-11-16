@@ -44,3 +44,30 @@ class RpsLogic():
       (RpsCommand.SCISSORS, RpsCommand.SCISSORS): Player.NONE,
     }[(move1, move2)]
 
+
+class RpsStats():
+  @staticmethod
+  def load_stats(filename):
+    try:
+      with file(filename, 'r') as f:
+        raw_stats = f.read()
+        player_one_stats, player_two_stats, draws= raw_stats.split(' ')
+        return (int(player_one_stats), int(player_two_stats), int(draws))
+    except:
+      return None
+
+  @staticmethod
+  def save_stats(
+      filename,
+      player_one_wins, 
+      player_two_wins,
+      draws):
+
+    try:
+      with file(filename, 'w') as f:
+        f.write('{} {} {}'.format(
+          player_one_wins, player_two_wins, draws))
+      return True
+    except:
+      return False
+
